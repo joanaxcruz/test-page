@@ -9,7 +9,7 @@ include:
   - CONTRIBUTING.md
   - CODE_OF_CONDUCT.md
 title: Vectorized Math Library
-logo: /docs/logo.png
+logo: /docs/sleeflogo3.png
 description: Add a short description here?
 show_downloads: true
 google_analytics:
