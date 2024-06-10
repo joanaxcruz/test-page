@@ -8,3 +8,9 @@ include:
   - LICENSE
   - CONTRIBUTING.md
   - CODE_OF_CONDUCT.md
+title: Vectorized Math Library
+logo: /docs/sleeflogo3.svg
+description: Add a short description here?
+show_downloads: true
+google_analytics:
+theme: jekyll-theme-minimal
