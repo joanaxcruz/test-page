@@ -8,6 +8,7 @@ include:
   - LICENSE
   - CONTRIBUTING.md
   - CODE_OF_CONDUCT.md
+markdown: kramdown
 title: Vectorized Math Library
 logo: /docs/sleeflogo3.png
 description: Add a short description here?
