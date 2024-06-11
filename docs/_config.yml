@@ -5,8 +5,8 @@ relative_links:
   collections: true
 markdown: kramdown
 title: SLEEF Vectorized Math Library
+description: Vectorized C99 math functions across popular platforms and architectures.
 logo: sleeflogo3.png
-description: Add a short description here?
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal

@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">
-    .no-bullets, .no-bullets li {
+      .no-bullets, .no-bullets li {
         list-style-type:none;
-    
-    }
+      }
     </style>
 
 {% seo %}
@@ -44,16 +43,15 @@
           <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
         </ul>
         {% endif %}
-        
+
         <ul class="no-bullets">
           <li><a class="none" href="{{ 'index.html' | absolute_url }}">Home</a></li>
-          <li><a class="none" href="{{ 'build/index.html' | absolute_url }}">User Guide</a></li>
-          <li><a class="none" href="{{ 'refs/index.html' | absolute_url }}">References</a></li>
-          <li><a class="none" href="{{ 'misc/index.html' | absolute_url }}">Tools</a></li>
-          <li><a class="none" href="{{ 'perf/index.html' | absolute_url }}">Performance</a></li>
+          <li><a class="none" href="{{ 'user-guide/index.html' | absolute_url }}">User Guide</a></li>
+          <li><a class="none" href="{{ 'references/index.html' | absolute_url }}">References</a></li>
+          <li><a class="none" href="{{ 'tools/index.html' | absolute_url }}">Tools</a></li>
+          <li><a class="none" href="{{ 'performance/index.html' | absolute_url }}">Performance</a></li>
           <li><a class="none" href="{{ 'extra/index.html' | absolute_url }}">Extra</a></li>
         </ul>
-        
       </header>
       <section>
 
@@ -64,9 +62,11 @@
         {% if site.github.is_project_page %}
         <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
+        <p><small>Copyright &copy; 2010-2024 SLEEF Project, Naoki Shibata and contributors.</small></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
   </body>
 </html>
+
