@@ -3,17 +3,7 @@ plugins:
 relative_links:
   enabled: true
   collections: true
-include:
-  - README.md
-  - LICENSE
-  - CONTRIBUTING.md
-  - CODE_OF_CONDUCT.md
-
 markdown: kramdown
-
-kramdown:
-  auto_ids: true
-
 title: SLEEF Vectorized Math Library
 logo: sleeflogo3.png
 description: Add a short description here?
