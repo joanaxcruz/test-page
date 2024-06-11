@@ -46,12 +46,12 @@
         {% endif %}
         
         <ul class="no-bullets">
-          <li><a class="none" href="index.html">Home</a></li>
-          <li><a class="none" href="{{ site.url }}{{ site.baseurl }}/build/index.html">User Guide</a></li>
+          <li><a class="none" href="{{ 'index.html' | relative_url }}">Home</a></li>
+          <li><a class="none" href="{{ 'build/index.html' | relative_url }}">User Guide</a></li>
           <li><a class="none" href="{{ 'refs/index.html' | relative_url }}">References</a></li>
-          <li><a class="none" href="misc/index.html">Tools</a></li>
-          <li><a class="none" href="perf/index.html">Performance</a></li>
-          <li><a class="none" href="extra/index.html">Extra</a></li>
+          <li><a class="none" href="{{ 'misc/index.html' | relative_url }}">Tools</a></li>
+          <li><a class="none" href="{{ 'perf/index.html' | relative_url }}">Performance</a></li>
+          <li><a class="none" href="{{ 'extra/index.html' | relative_url }}">Extra</a></li>
         </ul>
         
       </header>
