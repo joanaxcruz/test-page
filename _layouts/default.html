@@ -5,19 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">
-    div.ui-menu li {
-        list-style:none;
-    }
-    ul
-    {
+    .no-bullets, .no-bullets li {
         list-style-type:none;
-        padding:0px;
-        margin:0px;
-    }
-    li
-    {
-       display:inline;
-        padding-left:14px;
+    
     }
     </style>
 
@@ -54,17 +44,15 @@
           <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
         </ul>
         {% endif %}
-
-        <div class="ui-menu">
-          <ul>
-            <li><a class="none" href="index.html">Home</a></li>
-            <li><a class="none" href="compile.html">User Guide</a></li>
-            <li><a class="none" href="refs.html">References</a></li>
-            <li><a class="none" href="misc.html">Tools</a></li>
-            <li><a class="none" href="benchmark.html">Performance</a></li>
-            <li><a class="none" href="additional.html">Extra</a></li>
-          </ul>
-        </div>
+        
+        <ul class=".no-bullets">
+          <li><a class="none" href="index.html">Home</a></li>
+          <li><a class="none" href="compile.html">User Guide</a></li>
+          <li><a class="none" href="refs.html">References</a></li>
+          <li><a class="none" href="misc.html">Tools</a></li>
+          <li><a class="none" href="benchmark.html">Performance</a></li>
+          <li><a class="none" href="additional.html">Extra</a></li>
+        </ul>
         
       </header>
       <section>
