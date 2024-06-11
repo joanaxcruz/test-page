@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+    div.ui-menu li {
+        list-style:none;
+    }
+    ul
+    {
+        list-style-type:none;
+        padding:0px;
+        margin:0px;
+    }
+    li
+    {
+       display:inline;
+        padding-left:14px;
+    }
+    </style>
 
 {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
@@ -38,14 +54,18 @@
           <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
         </ul>
         {% endif %}
-        <ul class="none">
-          <li><a class="none" href="index.html">Introduction</a></li>
-          <li><a class="none" href="compile.html">User Guide</a></li>
-          <li><a class="none" href="refs.html">References</a></li>
-          <li><a class="none" href="misc.html">Other tools</a></li>
-          <li><a class="none" href="benchmark.html">Benchmark results</a></li>
-          <li><a class="none" href="additional.html">Additional notes</a></li>
-        </ul>
+
+        <div class="ui-menu">
+          <ul>
+            <li><a class="none" href="index.html">Home</a></li>
+            <li><a class="none" href="compile.html">User Guide</a></li>
+            <li><a class="none" href="refs.html">References</a></li>
+            <li><a class="none" href="misc.html">Tools</a></li>
+            <li><a class="none" href="benchmark.html">Performance</a></li>
+            <li><a class="none" href="additional.html">Extra</a></li>
+          </ul>
+        </div>
+        
       </header>
       <section>
 
