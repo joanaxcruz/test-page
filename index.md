@@ -1,8 +1,7 @@
+# Introduction
 
 * Placeholder for Table of Content
 {:toc}
-
-# Introduction
 
 ## Overview
 ## Supported environments
