@@ -1,15 +1,13 @@
 # Introduction
 
-<p style="text-align: center;">
   [Overview](#overview) | 
-  [Supported environments](#supported-environments) |
+  [Support](#support) |
   [Credit](#credit) |
   [Partners](#partners) |
   [License](#license) |
   [History](#history) |
-  [Related projects](#related-projects) |
-  [Publication](#[publication)
-</p>
+  [Related](#related) |
+  [Publication](#publication)
 
 ## Overview
 
@@ -21,7 +19,7 @@ blablalblablablablalblablablablalblablablablalblablablablalblablablablalblablabl
 blablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblabla
 blablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblabla
 
-## Supported environments
+## Support
 
 blablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblabla
 blablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblablablablalblabla
@@ -51,7 +49,7 @@ blablalblablablablalblablablablalblablablablalblablablablalblablablablalblablabl
 
 ## History
 
-## Related projects
+## Related
 
 ## Publication
 
