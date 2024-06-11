@@ -14,8 +14,8 @@ markdown: kramdown
 kramdown:
   auto_ids: true
 
-title: Vectorized Math Library
-logo: /docs/sleeflogo3.png
+title: SLEEF Vectorized Math Library
+logo: docs/sleeflogo3.png
 description: Add a short description here?
 show_downloads: true
 google_analytics:
