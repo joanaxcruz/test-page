@@ -1,3 +1,7 @@
+---
+id: references
+---
+
 # References
 
 * [Libm references](libm/)

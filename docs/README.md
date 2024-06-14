@@ -1,4 +1,8 @@
-# Introduction
+---
+id: home
+---
+
+# Home
 
   [Overview](#overview) |
   [Supported environment](#environment) |
@@ -20,7 +24,7 @@
   processors. SLEEF is designed to effciently perform computation with
   SIMD instructions by reducing the use of conditional branches and
   scatter/gather memory access. Our <a class="underlined"
-  href="benchmark.xhtml">benchmarks</a> show that the performance of
+  href="performance/">benchmarks</a> show that the performance of
   SLEEF is comparable to that of the best commercial library.
 </p>
 
@@ -33,23 +37,23 @@
   easily ported to other architectures by writing a helper file, which
   is a thin abstraction layer of SIMD intrinsics. SLEEF also
   provides <a class="underlined"
-  href="additional.xhtml#dispatcher">dispatchers</a> that
+  href="extra/#dispatcher">dispatchers</a> that
   automatically choose the best subroutines for the computer on which
   the library is executed. In order to further optimize the
   application code that calls SLEEF functions,
-  <a class="underlined" href="additional.xhtml#lto">link time
+  <a class="underlined" href="extra/#lto">link time
   optimization(LTO)</a> can be used to reduce the overhead of
   functions calls, and the build system of SLEEF supports usage of
   LTO. The library also has a functionality to generate
-  <a class="underlined" href="additional.xhtml#inline">header
+  <a class="underlined" href="extra/#inline">header
   files</a> in which the library functions are all defined as inline
   functions. SLEEF can be used for <a class="underlined"
-  href="cuda.xhtml">GPGPU</a> and <a class="underlined"
-  href="additional.xhtml#wasm">WebAssembly</a> with these header
+  href="references/libm/cuda">GPGPU</a> and <a class="underlined"
+  href="extra/#wasm">WebAssembly</a> with these header
   files. In addition to the vectorized functions, SLEEF provides
   scalar functions. Calls to these scalar SLEEF functions can be
   <a class="underlined"
-  href="additional.xhtml#vectorizing">auto-vectorized</a> by GCC.
+  href="extra/#vectorizing">auto-vectorized</a> by GCC.
 </p>
 
 <p>
@@ -57,12 +61,12 @@
   functions in double precision and single precision. Different
   accuracy of the results can be chosen for a subset of the elementary
   functions; for this subset there are versions with up to
-  1 <a class="underlined" href="additional.xhtml#ulp">ULP</a> error
+  1 <a class="underlined" href="extra/#ulp">ULP</a> error
   (which is the maximum error, not the average) and even faster
   versions with a few ULPs of error. For non-finite inputs and
   outputs, the functions return correct results as specified in the
   C99 standard. All the functions in the library
-  are <a class="underlined" href="misc.xhtml#testerlibm">thoroughly
+  are <a class="underlined" href="tools/#testerlibm">thoroughly
   tested</a> and confirmed that the evaluation error is within the
   designed limit by comparing the returned values against
   high-precision evaluation using the GNU MPFR Library.
@@ -70,7 +74,7 @@
 
 <p>
   As of version 3.6, SLEEF also includes a <a class="underlined"
-  href="quad.xhtml">quad-precision math library</a>. This library
+  href="references/quad">quad-precision math library</a>. This library
   includes fully vectorized IEEE 754 quadruple-precision (QP)
   functions that correspond to the standard C math functions. It also
   includes I/O functions for converting between QP numbers and
@@ -79,7 +83,7 @@
 
 <p>
   SLEEF also includes a library of <a class="underlined"
-  href="dft.xhtml">discrete Fourier transform(DFT)</a>. These
+  href="references/dft">discrete Fourier transform(DFT)</a>. These
   subroutines are fully vectorized, heavily unrolled, and parallelized
   in such a way that modern SIMD instructions and multiple cores can
   be utilized for efficient computation. It has an API similar to that
@@ -100,15 +104,15 @@
 <div><br/></div>
 
 <ul class="disc">
-  <li><a class="underlined" href="x86.xhtml">x86</a> - SSE2, SSE4.1,
+  <li><a class="underlined" href="references/libm/x86">x86</a> - SSE2, SSE4.1,
   AVX, AVX2+FMA3, AVX512F</li>
-  <li><a class="underlined" href="aarch64.xhtml">AArch64</a> - Advanced SIMD, SVE</li>
-  <li><a class="underlined" href="aarch32.xhtml">AArch32</a> - NEON</li>
-  <li><a class="underlined" href="ppc64.xhtml">PowerPC64</a> - VSX (POWER8), VSX-3 (POWER9)</li>
-  <li><a class="underlined" href="s390x.xhtml">System/390</a> - VXE (z14), VXE2 (z15)</li>
+  <li><a class="underlined" href="references/libm/aarch64">AArch64</a> - Advanced SIMD, SVE</li>
+  <li><a class="underlined" href="references/libm/aarch32">AArch32</a> - NEON</li>
+  <li><a class="underlined" href="references/libm/ppc64">PowerPC64</a> - VSX (POWER8), VSX-3 (POWER9)</li>
+  <li><a class="underlined" href="references/libm/s390x">System/390</a> - VXE (z14), VXE2 (z15)</li>
   <li>RISC-V - RVV1, RVV2</li>
-  <li><a class="underlined" href="cuda.xhtml">CUDA</a></li>
-  <li><a class="underlined" href="additional.xhtml#wasm">WebAssembly</a> - SSE2</li>
+  <li><a class="underlined" href="references/libm/cuda">CUDA</a></li>
+  <li><a class="underlined" href="extra/#wasm">WebAssembly</a> - SSE2</li>
 </ul>
 
 <div><br/></div>
@@ -179,9 +183,9 @@
 	  <td class="lt-r" align="left">x86_64, Windows</td>
 	  <td></td>
 	  <td class="lt-lr" align="center">Supported(Cygwin)(*3)</td>
-	  <td class="lt-r" align="center"><a class="underlined" href="compile.xhtml#cow">Supported</a></td>
+	  <td class="lt-r" align="center"><a class="underlined" href="user-guide/#cow">Supported</a></td>
 	  <td class="lt-r" align="center"></td>
-	  <td class="lt-" align="center"><a class="underlined" href="compile.xhtml#MSVC">Supported</a></td>
+	  <td class="lt-" align="center"><a class="underlined" href="user-guide/#MSVC">Supported</a></td>
 	</tr>
 	<tr>
 	  <td class="lt-r" align="left">AArch32, Linux</td>
@@ -235,7 +239,7 @@
 	  <td class="lt-r" align="left">AArch64, Android</td>
 	  <td></td>
 	  <td class="lt-lr" align="center"></td>
-	  <td class="lt-r" align="center"><a class="underlined" href="compile.xhtml#cross">Preliminary</a></td>
+	  <td class="lt-r" align="center"><a class="underlined" href="user-guide/#cross">Preliminary</a></td>
 	  <td class="lt-r" align="center">N/A</td>
 	  <td class="lt-" align="center">N/A</td>
 	</tr>
@@ -243,7 +247,7 @@
 	  <td class="lt-br" align="left">AArch64, iOS</td>
 	  <td class="lt-hl"></td>
 	  <td class="lt-blr" align="center"></td>
-	  <td class="lt-br" align="center"><a class="underlined" href="compile.xhtml#cross">Preliminary</a></td>
+	  <td class="lt-br" align="center"><a class="underlined" href="user-guide/#cross">Preliminary</a></td>
 	  <td class="lt-br" align="center">N/A</td>
 	  <td class="lt-b" align="center">N/A</td>
 	</tr>
@@ -361,9 +365,8 @@
 <h2 id="partners">Partner institutes and corporations</h2>
 
 <table style="margin-top:1cm;">
-  <tr><td>&nbsp;</td></tr>
   <tr>
-    <td style="text-align:center;"><a href="https://www.naist.jp/en/"><img src="naistlogo.svg"
+    <td style="text-align:center;"><a href="https://www.naist.jp/en/"><img src="img/naistlogo.svg"
     height="135px" alt="NAIST logo"/></a></td>
     <td style="vertical-align: top;">
       <p class="noindent" style="margin-left:2em;">
@@ -372,11 +375,8 @@ of Science and Technology participates through Naoki Shibata.
       </p>
     </td>
   </tr>
-  <tr><td>&nbsp;</td></tr>
-  <tr><td>&nbsp;</td></tr>
-  <tr><td>&nbsp;</td></tr>
   <tr>
-    <td style="text-align:center;"><a href="https://ibm.com/"><img src="https://sleef.org/IBM_logo.svg" alt="IBM logo" 
+    <td style="text-align:center;"><a href="https://ibm.com/"><img src="img/IBM_logo.svg" alt="IBM logo" 
     height="68px" /></a></td>
     <td style="vertical-align: top;">
       <p class="noindent" style="margin-left:2em;">
@@ -386,11 +386,8 @@ participates through David Edelsohn.
       </p>
     </td>
   </tr>
-  <tr><td>&nbsp;</td></tr>
-  <tr><td>&nbsp;</td></tr>
-  <tr><td>&nbsp;</td></tr>
   <tr>
-    <td style="text-align:center;"><a href="https://www.arm.com/"><img src="https://sleef.org/Arm-logo-blue-pms313.svg" alt="ARM logo" 
+    <td style="text-align:center;"><a href="https://www.arm.com/"><img src="img/Arm-logo-blue-pms313.svg" alt="ARM logo" 
     height="60px" /></a></td>
     <td style="vertical-align: top;">
       <p class="noindent" style="margin-left:2em;">
@@ -400,11 +397,8 @@ participates through Pierre Blanchard, Joe Ramsay and Joana Cruz.
       </p>
     </td>
   </tr>
-  <tr><td>&nbsp;</td></tr>
-  <tr><td>&nbsp;</td></tr>
-  <tr><td>&nbsp;</td></tr>
   <tr>
-    <td style="text-align:center;"><a href="https://unity3d.com/"><img src="https://sleef.org/Unity_Technologies_logo.svg" alt="Unity Technologies logo" 
+    <td style="text-align:center;"><a href="https://unity3d.com/"><img src="img/Unity_Technologies_logo.svg" alt="Unity Technologies logo" 
     height="92px" /></a></td>
     <td style="vertical-align: top;">
       <p class="noindent" style="margin-left:2em;">As the leading
@@ -414,7 +408,6 @@ through Alexandre Mutel.
       </p>
     </td>
   </tr>
-  <tr><td>&nbsp;</td></tr>
 </table>
 
 <h2 id="license">License</h2>
@@ -427,7 +420,7 @@ href="http://www.boost.org/LICENSE_1_0.txt">Boost Software License
 
 <p class="noindent" style="margin-top: 0.8cm;">
   <a class="nothing" href="https://opensource.org/">
-    <img src="osi_logo.png" width="90" height="103" alt="open source logo" style="position:relative; top:3px;"/>
+    <img src="img/osi_logo.png" width="90" height="103" alt="open source logo" style="position:relative; top:3px;"/>
   </a>
 &nbsp; Boost Software License is <a class="underlined"
 href="https://opensource.org/licenses/BSL-1.0">OSI-certified</a>.

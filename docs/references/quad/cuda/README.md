@@ -1,50 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=0.4"/>
-<meta name="google" content="notranslate" />
-<link rel="canonical" href="https://sleef.org/quadcuda.xhtml" />
-<link rel="icon" href="favicon.png" />
-<link rel="stylesheet" type="text/css" href="texlike.css"/>
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
-<link rel="stylesheet" type="text/css" href="sleef.css"/>
-<title>SLEEF - Quad-precision math library reference (CUDA)</title>
-</head>
-<body translate="no" class="notranslate">
-<h1>SLEEF - Quad-precision math library reference (CUDA)</h1>
+<h1>Quad-precision math library reference (CUDA)</h1>
+
+Data types and functions for
+
+  [All architectures](../) |
+  [x86](../x86/) |
+  [aarch64](../aarch64/) |
+  [ppc64](../ppc64/) |
+  [s390x](../s390x/) |
+  [cuda](../cuda/)
 
 <h2>Table of contents</h2>
 
-<ul class="none" style="font-family: arial, sansserif; padding-left: 0.5cm;">
-  <li><a class="underlined" href="index.xhtml">Introduction</a></li>
-  <li><a class="underlined" href="compile.xhtml">Compiling and installing the library</a></li>
-  <li><a class="underlined" href="purec.xhtml">Math library reference</a></li>
-  <li>&nbsp;</li>
-  <li><a class="underlined" href="quad.xhtml"> Quad-precision math library reference</a>
-  <ul class="disc">
-    <li><a class="underlined" href="quad.xhtml">Data types and functions for all architectures</a></li>
-    <li><a class="underlined" href="quadx86.xhtml">Data types and functions for x86 architecture</a></li>
-    <li><a class="underlined" href="quadaarch64.xhtml">Data types and functions for AArch64 architecture</a></li>
-    <li><a class="underlined" href="quadppc64.xhtml">Data types and functions for PPC64 architecture</a></li>
-    <li><a class="underlined" href="quads390x.xhtml">Data types and functions for System/390 architecture</a></li>
-    <li><a class="underlined" href="quadcuda.xhtml">Data types and functions for CUDA</a></li>
-    <ul class="circle">
-      <li><a href="#tutorial">Tutorial</a></li>
-      <li><a href="#conversion">Conversion functions</a></li>
-      <li><a href="#comparison">Comparison and selection functions</a></li>
-      <li><a href="#mathfunctions">Math functions</a></li>
-    </ul>
-  </ul>
-  </li>
-  <li>&nbsp;</li>
-  <li><a class="underlined" href="dft.xhtml">DFT library reference</a></li>
-  <li><a class="underlined" href="misc.xhtml">Other tools included in the package</a></li>
-  <li><a class="underlined" href="benchmark.xhtml">Benchmark results</a></li>
-  <li><a class="underlined" href="additional.xhtml">Additional notes</a></li>
+<ul class="circle">
+  <li><a href="#tutorial">Tutorial</a></li>
+  <li><a href="#conversion">Conversion functions</a></li>
+  <li><a href="#comparison">Comparison and selection functions</a></li>
+  <li><a href="#mathfunctions">Math functions</a></li>
 </ul>
-
 
 <h2 id="tutorial">Tutorial</h2>
 
@@ -334,7 +306,7 @@
 
 <p class="noindent">
   These are the vectorized functions of <a class="underlined"
-  href="quad.xhtml#basicComparison">comparison functions</a>.
+  href="../#basicComparison">comparison functions</a>.
 </p>
 
 <hr/>
@@ -353,7 +325,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_icmpq1_purec"><b class="func">Sleef_icmpq1_purec</b></a>.
+  of <a href="../#Sleef_icmpq1_purec"><b class="func">Sleef_icmpq1_purec</b></a>.
 </p>
 
 <hr/>
@@ -372,7 +344,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_iunordq1_purec"><b class="func">Sleef_iunordq1_purec</b></a>.
+  of <a href="../#Sleef_iunordq1_purec"><b class="func">Sleef_iunordq1_purec</b></a>.
 </p>
 
 <hr/>
@@ -414,7 +386,7 @@
 
 <p class="noindent">
   These are the vectorized functions of <a class="underlined"
-  href="quad.xhtml#basicArithmetic">the basic arithmetic operations</a>.
+  href="../#basicArithmetic">the basic arithmetic operations</a>.
 </p>
 
 <hr/>
@@ -433,7 +405,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_sqrtq1_u05purec"><b class="func">Sleef_sqrtq1_u05purec</b></a>.
+  of <a href="../#Sleef_sqrtq1_u05purec"><b class="func">Sleef_sqrtq1_u05purec</b></a>.
 </p>
 
 <hr/>
@@ -452,7 +424,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_sinq1_u10purec"><b class="func">Sleef_sinq1_u10purec</b></a>.
+  of <a href="../#Sleef_sinq1_u10purec"><b class="func">Sleef_sinq1_u10purec</b></a>.
 </p>
 
 <hr/>
@@ -471,7 +443,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_cosq1_u10purec"><b class="func">Sleef_cosq1_u10purec</b></a>.
+  of <a href="../#Sleef_cosq1_u10purec"><b class="func">Sleef_cosq1_u10purec</b></a>.
 </p>
 
 <hr/>
@@ -490,7 +462,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_tanq1_u10purec"><b class="func">Sleef_tanq1_u10purec</b></a>.
+  of <a href="../#Sleef_tanq1_u10purec"><b class="func">Sleef_tanq1_u10purec</b></a>.
 </p>
 
 <hr/>
@@ -509,7 +481,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_asinq1_u10purec"><b class="func">Sleef_asinq1_u10purec</b></a>.
+  of <a href="../#Sleef_asinq1_u10purec"><b class="func">Sleef_asinq1_u10purec</b></a>.
 </p>
 
 <hr/>
@@ -528,7 +500,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_acosq1_u10purec"><b class="func">Sleef_acosq1_u10purec</b></a>.
+  of <a href="../#Sleef_acosq1_u10purec"><b class="func">Sleef_acosq1_u10purec</b></a>.
 </p>
 
 <hr/>
@@ -547,7 +519,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_atanq1_u10purec"><b class="func">Sleef_atanq1_u10purec</b></a>.
+  of <a href="../#Sleef_atanq1_u10purec"><b class="func">Sleef_atanq1_u10purec</b></a>.
 </p>
 
 <hr/>
@@ -566,7 +538,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_expq1_u10purec"><b class="func">Sleef_expq1_u10purec</b></a>.
+  of <a href="../#Sleef_expq1_u10purec"><b class="func">Sleef_expq1_u10purec</b></a>.
 </p>
 
 <hr/>
@@ -585,7 +557,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_exp2q1_u10purec"><b class="func">Sleef_exp2q1_u10purec</b></a>.
+  of <a href="../#Sleef_exp2q1_u10purec"><b class="func">Sleef_exp2q1_u10purec</b></a>.
 </p>
 
 <hr/>
@@ -604,7 +576,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_exp10q1_u10purec"><b class="func">Sleef_exp10q1_u10purec</b></a>.
+  of <a href="../#Sleef_exp10q1_u10purec"><b class="func">Sleef_exp10q1_u10purec</b></a>.
 </p>
 
 <hr/>
@@ -623,7 +595,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_expm1q1_u10purec"><b class="func">Sleef_expm1q1_u10purec</b></a>.
+  of <a href="../#Sleef_expm1q1_u10purec"><b class="func">Sleef_expm1q1_u10purec</b></a>.
 </p>
 
 <hr/>
@@ -642,7 +614,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_logq1_u10purec"><b class="func">Sleef_logq1_u10purec</b></a>.
+  of <a href="../#Sleef_logq1_u10purec"><b class="func">Sleef_logq1_u10purec</b></a>.
 </p>
 
 <hr/>
@@ -661,7 +633,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_log2q1_u10purec"><b class="func">Sleef_log2q1_u10purec</b></a>.
+  of <a href="../#Sleef_log2q1_u10purec"><b class="func">Sleef_log2q1_u10purec</b></a>.
 </p>
 
 <hr/>
@@ -680,7 +652,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_log10q1_u10purec"><b class="func">Sleef_log10q1_u10purec</b></a>.
+  of <a href="../#Sleef_log10q1_u10purec"><b class="func">Sleef_log10q1_u10purec</b></a>.
 </p>
 
 <hr/>
@@ -699,7 +671,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_log1pq1_u10purec"><b class="func">Sleef_log1pq1_u10purec</b></a>.
+  of <a href="../#Sleef_log1pq1_u10purec"><b class="func">Sleef_log1pq1_u10purec</b></a>.
 </p>
 
 <hr/>
@@ -719,7 +691,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_powq1_u10purec"><b class="func">Sleef_powq1_u10purec</b></a>.
+  of <a href="../#Sleef_powq1_u10purec"><b class="func">Sleef_powq1_u10purec</b></a>.
 </p>
 
 <hr/>
@@ -739,7 +711,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_sinhq1_u10purec"><b class="func">Sleef_sinhq1_u10purec</b></a>.
+  of <a href="../#Sleef_sinhq1_u10purec"><b class="func">Sleef_sinhq1_u10purec</b></a>.
 </p>
 
 <hr/>
@@ -759,7 +731,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_coshq1_u10purec"><b class="func">Sleef_coshq1_u10purec</b></a>.
+  of <a href="../#Sleef_coshq1_u10purec"><b class="func">Sleef_coshq1_u10purec</b></a>.
 </p>
 
 <hr/>
@@ -779,7 +751,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_tanhq1_u10purec"><b class="func">Sleef_tanhq1_u10purec</b></a>.
+  of <a href="../#Sleef_tanhq1_u10purec"><b class="func">Sleef_tanhq1_u10purec</b></a>.
 </p>
 
 <hr/>
@@ -799,7 +771,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_asinhq1_u10purec"><b class="func">Sleef_asinhq1_u10purec</b></a>.
+  of <a href="../#Sleef_asinhq1_u10purec"><b class="func">Sleef_asinhq1_u10purec</b></a>.
 </p>
 
 <hr/>
@@ -819,7 +791,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_acoshq1_u10purec"><b class="func">Sleef_acoshq1_u10purec</b></a>.
+  of <a href="../#Sleef_acoshq1_u10purec"><b class="func">Sleef_acoshq1_u10purec</b></a>.
 </p>
 
 <hr/>
@@ -839,7 +811,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_atanhq1_u10purec"><b class="func">Sleef_atanhq1_u10purec</b></a>.
+  of <a href="../#Sleef_atanhq1_u10purec"><b class="func">Sleef_atanhq1_u10purec</b></a>.
 </p>
 
 <hr/>
@@ -859,7 +831,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_truncq1_purec"><b class="func">Sleef_truncq1_purec</b></a>.
+  of <a href="../#Sleef_truncq1_purec"><b class="func">Sleef_truncq1_purec</b></a>.
 </p>
 
 <hr/>
@@ -879,7 +851,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_floorq1_purec"><b class="func">Sleef_floorq1_purec</b></a>.
+  of <a href="../#Sleef_floorq1_purec"><b class="func">Sleef_floorq1_purec</b></a>.
 </p>
 
 <hr/>
@@ -899,7 +871,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_ceilq1_purec"><b class="func">Sleef_ceilq1_purec</b></a>.
+  of <a href="../#Sleef_ceilq1_purec"><b class="func">Sleef_ceilq1_purec</b></a>.
 </p>
 
 <hr/>
@@ -919,7 +891,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_roundq1_purec"><b class="func">Sleef_roundq1_purec</b></a>.
+  of <a href="../#Sleef_roundq1_purec"><b class="func">Sleef_roundq1_purec</b></a>.
 </p>
 
 <hr/>
@@ -939,7 +911,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_rintq1_purec"><b class="func">Sleef_rintq1_purec</b></a>.
+  of <a href="../#Sleef_rintq1_purec"><b class="func">Sleef_rintq1_purec</b></a>.
 </p>
 
 <hr/>
@@ -959,7 +931,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_fabsq1_purec"><b class="func">Sleef_fabsq1_purec</b></a>.
+  of <a href="../#Sleef_fabsq1_purec"><b class="func">Sleef_fabsq1_purec</b></a>.
 </p>
 
 <hr/>
@@ -979,7 +951,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_copysignq1_purec"><b class="func">Sleef_copysignq1_purec</b></a>.
+  of <a href="../#Sleef_copysignq1_purec"><b class="func">Sleef_copysignq1_purec</b></a>.
 </p>
 
 <hr/>
@@ -999,7 +971,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_fmaxq1_purec"><b class="func">Sleef_fmaxq1_purec</b></a>.
+  of <a href="../#Sleef_fmaxq1_purec"><b class="func">Sleef_fmaxq1_purec</b></a>.
 </p>
 
 <hr/>
@@ -1019,7 +991,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_fminq1_purec"><b class="func">Sleef_fminq1_purec</b></a>.
+  of <a href="../#Sleef_fminq1_purec"><b class="func">Sleef_fminq1_purec</b></a>.
 </p>
 
 <hr/>
@@ -1039,7 +1011,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_fdimq1_u05purec"><b class="func">Sleef_fdimq1_u05purec</b></a>.
+  of <a href="../#Sleef_fdimq1_u05purec"><b class="func">Sleef_fdimq1_u05purec</b></a>.
 </p>
 
 <hr/>
@@ -1059,7 +1031,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_fmodq1_purec"><b class="func">Sleef_fmodq1_purec</b></a>.
+  of <a href="../#Sleef_fmodq1_purec"><b class="func">Sleef_fmodq1_purec</b></a>.
 </p>
 
 <hr/>
@@ -1079,7 +1051,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_remainderq1_purec"><b class="func">Sleef_remainderq1_purec</b></a>.
+  of <a href="../#Sleef_remainderq1_purec"><b class="func">Sleef_remainderq1_purec</b></a>.
 </p>
 
 <hr/>
@@ -1099,7 +1071,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_frexpq1_purec"><b class="func">Sleef_frexpq1_purec</b></a>.
+  of <a href="../#Sleef_frexpq1_purec"><b class="func">Sleef_frexpq1_purec</b></a>.
 </p>
 
 <hr/>
@@ -1119,7 +1091,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_modfq1_purec"><b class="func">Sleef_modfq1_purec</b></a>.
+  of <a href="../#Sleef_modfq1_purec"><b class="func">Sleef_modfq1_purec</b></a>.
 </p>
 
 <hr/>
@@ -1139,7 +1111,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_hypotq1_u05purec"><b class="func">Sleef_hypotq1_u05purec</b></a>.
+  of <a href="../#Sleef_hypotq1_u05purec"><b class="func">Sleef_hypotq1_u05purec</b></a>.
 </p>
 
 <hr/>
@@ -1159,7 +1131,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_fmaq1_u05purec"><b class="func">Sleef_fmaq1_u05purec</b></a>.
+  of <a href="../#Sleef_fmaq1_u05purec"><b class="func">Sleef_fmaq1_u05purec</b></a>.
 </p>
 
 <hr/>
@@ -1179,7 +1151,7 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_ldexpq1_purec"><b class="func">Sleef_ldexpq1_purec</b></a>.
+  of <a href="../#Sleef_ldexpq1_purec"><b class="func">Sleef_ldexpq1_purec</b></a>.
 </p>
 
 <hr/>
@@ -1199,24 +1171,6 @@
 
 <p class="noindent">
   These are the vectorized functions
-  of <a href="quad.xhtml#Sleef_ilogbq1_purec"><b class="func">Sleef_ilogbq1_purec</b></a>.
+  of <a href="../#Sleef_ilogbq1_purec"><b class="func">Sleef_ilogbq1_purec</b></a>.
 </p>
 
-
-<p class="footer">
-  Copyright &copy; 2010-2024 SLEEF Project, Naoki Shibata and contributors.<br/>
-  SLEEF is open-source software and is distributed under the Boost Software License, Version 1.0.
-</p>
-
-<script type="text/javascript">
-//<![CDATA[
-var sc_project=11391936;
-var sc_invisible=1;
-var sc_security="fa400da8";
-//]]>
-</script>
-<script type="text/javascript" src="https://www.statcounter.com/counter/counter_xhtml.js"></script>
-
-
-</body>
-</html>

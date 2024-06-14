@@ -1,4 +1,4 @@
-<h1>SLEEF - DFT library reference</h1>
+<h1>DFT library reference</h1>
 
 <h2>Table of contents</h2>
 
@@ -13,7 +13,7 @@
 <p class="noindent">
   I now explain how to use this DFT library by referring to an example
   source code shown below. 
-  <a class="underlined" href="tutorial.c">This source code</a> is
+  <a class="underlined" href="../../src/tutorial.c">This source code</a> is
   included in the distribution package under src/dft-tester directory.
 </p>
 
@@ -95,7 +95,7 @@
 <code>}</code>
 </pre>
 <p style="text-align:center;">
-  Fig. 4.1: <a href="tutorial.c">Test code for DFT subroutines</a>
+  Fig. 4.1: <a href="../../src/tutorial.c">Test code for DFT subroutines</a>
 </p>
 
 <div style="margin-top: 1.0cm;"></div>
@@ -152,7 +152,7 @@
 </p>
 
 <p>
-  Under src/dft-tester directory, there are other examples showing how
+  Under ../src/dft-tester directory, there are other examples showing how
   to execute transforms in a way that you get equivalent results to
   other libraries.
 </p>

@@ -1,4 +1,9 @@
-<h1>SLEEF - Other tools included in the package</h1>
+
+---
+id: tools
+---
+
+<h1>Other tools included in the package</h1>
 
 <h2>Table of contents</h2>
 
@@ -132,7 +137,7 @@
   In order to start a measurement, you need to first build the
   executable for measurement. CMake builds the executable along with
   the library. Please refer to <a class="underlined"
-  href="compile.xhtml">compiling and installing the library</a> for
+  href="../user-guide/">compiling and installing the library</a> for
   this.
 </p>
 
@@ -194,7 +199,7 @@ $ &block;</pre>
   Then type "make plot" to generate graphs. You need to have JDK and
   gnuplot installed on your computer. Four graphs are generated :
   trigdp.png, nontrigdp.png, trigsp.png and nontrigsp.png. Please see our
-  <a class="underlined" href="benchmark.xhtml">benchmark results</a>
+  <a class="underlined" href="../performance/">benchmark results</a>
   for an example of generated graphs by this tool.
 </p>
 

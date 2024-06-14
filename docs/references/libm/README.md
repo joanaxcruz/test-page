@@ -1,26 +1,27 @@
-<h1>SLEEF - Math library reference</h1>
+<h1>Math library reference</h1>
+
+Data types and functions for
+
+  [All architectures](./) |
+  [x86](x86/) |
+  [aarch64](aarch64/) |
+  [aarch32](aarch32/) |
+  [ppc64](ppc64/) |
+  [s390x](s390x/) |
+  [cuda](cuda/)
 
 <h2>Table of contents</h2>
 
-<ul class="disc">
-  <li><a class="underlined" href="index.html">Data types and functions for all architectures</a></li>
-  <ul class="circle">
-    <li><a href="#naming">Function naming convention</a></li>
-    <li><a href="#datatypes">Data types</a></li>
-    <li><a href="#trig">Trigonometric functions</a></li>
-    <li><a href="#pow">Power, exponential, and logarithmic functions</a></li>
-    <li><a href="#invtrig">Inverse trigonometric functions</a></li>
-    <li><a href="#hyp">Hyperbolic functions and inverse hyperbolic functions</a></li>
-    <li><a href="#eg">Error and gamma functions</a></li>
-    <li><a href="#nearint">Nearest integer functions</a></li>
-    <li><a href="#other">Other functions</a></li>
-  </ul>
-  <li><a class="underlined" href="x86.xhtml">Data types and functions for x86 architecture</a></li>
-  <li><a class="underlined" href="aarch64.xhtml">Data types and functions for AArch64 architecture</a></li>
-  <li><a class="underlined" href="aarch32.xhtml">Data types and functions for AArch32 architecture</a></li>
-  <li><a class="underlined" href="ppc64.xhtml">Data types and functions for PPC64 architecture</a></li>
-  <li><a class="underlined" href="s390x.xhtml">Data types and functions for System/390 architecture</a></li>
-  <li><a class="underlined" href="cuda.xhtml">Data types and functions for CUDA</a></li>
+<ul class="circle">
+  <li><a href="#naming">Function naming convention</a></li>
+  <li><a href="#datatypes">Data types</a></li>
+  <li><a href="#trig">Trigonometric functions</a></li>
+  <li><a href="#pow">Power, exponential, and logarithmic functions</a></li>
+  <li><a href="#invtrig">Inverse trigonometric functions</a></li>
+  <li><a href="#hyp">Hyperbolic functions and inverse hyperbolic functions</a></li>
+  <li><a href="#eg">Error and gamma functions</a></li>
+  <li><a href="#nearint">Nearest integer functions</a></li>
+  <li><a href="#other">Other functions</a></li>
 </ul>
 
 <h2 id="naming">Function naming convention</h2>
@@ -33,7 +34,7 @@ instructions, respectively. Functions with FMA instructions are only
 available on architectures with FMA instructions. The two digits
 number after "_u" is 10 times the maximum error for typical input
 domain in <a class="underlined"
-href="additional.xhtml#ulp">ULP</a>. The functions whose names contain
+href="../../extra/#ulp">ULP</a>. The functions whose names contain
 "finz" and "cinz" are functions that give bit-wise consistent results
 across all platforms. The "f" attribute indicates that it utilizes FMA
 instructions, while "c" means no FMA.
@@ -2616,20 +2617,3 @@ the C99 specification of nextafter and nextafterf functions. These functions
 do not set errno nor raise an exception.
 </p>
 
-<p class="footer">
-  Copyright &copy; 2010-2024 SLEEF Project, Naoki Shibata and contributors.<br/>
-  SLEEF is open-source software and is distributed under the Boost Software License, Version 1.0.
-</p>
-
-<script type="text/javascript">
-//<![CDATA[
-var sc_project=11391936;
-var sc_invisible=1;
-var sc_security="fa400da8";
-//]]>
-</script>
-<script type="text/javascript" src="https://www.statcounter.com/counter/counter_xhtml.js"></script>
-
-
-</body>
-</html>

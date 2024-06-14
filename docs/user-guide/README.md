@@ -1,4 +1,9 @@
-<h1>SLEEF - Compiling and installing the library</h1>
+
+---
+id: user-guide
+---
+
+<h1>Compiling and installing the library</h1>
 
 <h2>Table of contents</h2>
 
@@ -79,7 +84,7 @@ $ sudo cmake --install build/ --prefix /path/to/install/dir
 
 <p>
   You can build the library with <a class="underlined"
-  href="additional.xhtml#lto">link time opimization(LTO)</a> support
+  href="../extra/#lto">link time opimization(LTO)</a> support
   with the following commands. Note that you can only build static
   libraries with LTO support. You also have to use the same compiler
   with the same version to build the library and other source codes.
@@ -99,7 +104,7 @@ $ sudo cmake --install build/ --prefix /path/to/install/dir
 <h3 id="inline">Building the header files for inlining the whole SLEEF functions</h3>
 
 <p>
-  <a class="underlined" href="additional.xhtml#inline">Header files
+  <a class="underlined" href="../extra/#inline">Header files
   for inlining the whole SLEEF functions</a> can be built with the
   following commands. With these header files, it may be easier to
   inline the whole SLEEF functions than using LTO. You have to specify
@@ -150,7 +155,7 @@ D:\sleef-3.X> cmake --build build --clean-first</pre>
 
 <p class="noindent">
   Now, let's try compiling the <a class="underlined"
-  href="hellox86.c">source code shown in Fig. 2.1</a>.
+  href="../src/hellox86.c">source code shown in Fig. 2.1</a>.
 </p>
 
 <pre class="code">
@@ -178,7 +183,7 @@ D:\sleef-3.X> cmake --build build --clean-first</pre>
 <code>}</code>
 </pre>
 <p style="text-align:center;">
-  Fig. 2.1: <a href="hellox86.c">Source code for testing</a>
+  Fig. 2.1: <a href="../src/hellox86.c">Source code for testing</a>
 </p>
 
 
@@ -208,7 +213,7 @@ $ &block;</pre>
 
 <p class="noindent">
   Below is an example <a class="underlined"
-  href="CMakeLists.txt">CMakeLists.txt</a> for compiling the above
+  href="../src/CMakeLists.txt">CMakeLists.txt</a> for compiling the above
   hellox86.c. CMake will automatically download SLEEF from GitHub
   repository, and thus there is no need to include SLEEF in your
   software package. If you prefer importing SLEEF as a submodule in
@@ -234,7 +239,7 @@ $ &block;</pre>
 <code>target_link_libraries(hellox86 sleef)</code>
 </pre>
 <p style="text-align:center;">
-  Fig. 2.3: <a href="CMakeLists.txt">Example CMakeLists.txt</a>
+  Fig. 2.3: <a href="../src/CMakeLists.txt">Example CMakeLists.txt</a>
 </p>
 
 

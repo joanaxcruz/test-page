@@ -1,23 +1,24 @@
-<h1>SLEEF - Quad-precision math library reference</h1>
+<h1>Quad-precision math library reference</h1>
+
+Data types and functions for
+
+  [All architectures](.) |
+  [x86](x86/) |
+  [aarch64](aarch64/) |
+  [ppc64](ppc64/) |
+  [s390x](s390x/) |
+  [cuda](cuda/)
 
 <h2>Table of contents</h2>
 
-<ul class="disc">
-  <li><a class="underlined" href="index.html">Data types and functions for all architectures</a></li>
-  <ul class="circle">
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#datatypes">Data types</a></li>
-    <li><a href="#macro">Convenience macros and constants</a></li>
-    <li><a href="#conversion">Conversion and output functions</a></li>
-    <li><a href="#comparison">Comparison functions</a></li>
-    <li><a href="#mathfunctions">Math functions</a></li>
-    <li><a href="#tutorial">Tutorial</a></li>
-  </ul>
-  <li><a class="underlined" href="quadx86.xhtml">Data types and functions for x86 architecture</a></li>
-  <li><a class="underlined" href="quadaarch64.xhtml">Data types and functions for AArch64 architecture</a></li>
-  <li><a class="underlined" href="quadppc64.xhtml">Data types and functions for PPC64 architecture</a></li>
-  <li><a class="underlined" href="quads390x.xhtml">Data types and functions for System/390 architecture</a></li>
-  <li><a class="underlined" href="quadcuda.xhtml">Data types and functions for CUDA</a></li>
+<ul class="circle">
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#datatypes">Data types</a></li>
+  <li><a href="#macro">Convenience macros and constants</a></li>
+  <li><a href="#conversion">Conversion and output functions</a></li>
+  <li><a href="#comparison">Comparison functions</a></li>
+  <li><a href="#mathfunctions">Math functions</a></li>
+  <li><a href="#tutorial">Tutorial</a></li>
 </ul>
 
 <h2 id="introduction">Introduction</h2>
@@ -1600,7 +1601,7 @@ and <b>SLEEF_FP_ILOGBNAN</b>, respectively.
 
 <p class="noindent">
   I would like to show an example of how the vectorized QP functions
-  can be used. Below is <a class="underlined" href="machinx86.c">a
+  can be used. Below is <a class="underlined" href="../../src/machinx86.c">a
   source code</a> for computing &pi; with <a class="underlined"
   href="https://en.wikipedia.org/wiki/Machin-like_formula">Machin's
   formula</a> on x86 GNU systems. This formula has two terms with arc
@@ -1611,11 +1612,11 @@ and <b>SLEEF_FP_ILOGBNAN</b>, respectively.
   variables. Variables <i class="var">q0</i>, <i class="var">q1</i>, <i class="var">q2</i>
   and <i class="var">q3</i> retain two QP FP values each. At line 5, 8
   and 11, QP values in arrays are loaded into these variables with
-  <a href="quadx86.xhtml#load"><b class="func">Sleef_loadq2_sse2</b></a>
+  <a href="x86/#load"><b class="func">Sleef_loadq2_sse2</b></a>
   function. Vector operations are carried out from line 14 to 16, and
   then each element of the vector variable <i class="var">q3</i> is
   extracted
-  with <a href="quadx86.xhtml#get"><b class="func">Sleef_getq2_sse2</b></a>
+  with <a href="x86/#get"><b class="func">Sleef_getq2_sse2</b></a>
   function and subtracted to obtain the result at line 18. Note that
   the QP subtract function in the standard library is called to do
   this subtraction.  This result is output to the console
@@ -1648,7 +1649,7 @@ and <b>SLEEF_FP_ILOGBNAN</b>, respectively.
 <code>}</code>
 </pre>
 <p style="text-align:center;">
-  Fig. 4.1: <a class="underlined" href="machinx86.c">Example source code for x86 computers</a>
+  Fig. 4.1: <a class="underlined" href="../../src/machinx86.c">Example source code for x86 computers</a>
 </p>
 
 <br/>
@@ -1657,13 +1658,13 @@ and <b>SLEEF_FP_ILOGBNAN</b>, respectively.
   <b class="type">__float128</b> data type is not defined on MSVC, and
   thus we cannot use literals of this type to initialize QP
   variables. Sleef provides various conversion functions for this
-  purpose. In <a class="underlined" href="machinx86.c">the following
+  purpose. In <a class="underlined" href="../../src/machinx86.c">the following
   source
   code</a>, <a href="#Sleef_cast_from_doubleq1_purec"><b class="func">Sleef_cast_from_doubleq1_purec</b></a>
   function is used to initialize <i class="var">q0</i> from line 4 to
   5. <a href="#Sleef_strtoq"><b class="func">Sleef_strtoq</b></a>
   function is used to initialize <i class="var">q1</i> at line 7.
-  Here, <a href="quadx86.xhtml#splat"><b class="func">Sleef_splatq2_sse2</b></a>
+  Here, <a href="x86/#splat"><b class="func">Sleef_splatq2_sse2</b></a>
   function is a function for setting the specified QP FP value to all
   elements in a vector. Obtaining QP FP constants by calling these
   functions may waste some CPU time. From line 9 and
@@ -1704,7 +1705,7 @@ and <b>SLEEF_FP_ILOGBNAN</b>, respectively.
 <code>}</code>
 </pre>
 <p style="text-align:center;">
-  Fig. 4.2: <a class="underlined" href="machinmsvc.c">Example source code for MSVC</a>
+  Fig. 4.2: <a class="underlined" href="../../src/machinmsvc.c">Example source code for MSVC</a>
 </p>
 
 
