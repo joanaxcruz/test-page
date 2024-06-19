@@ -1,14 +1,9 @@
-remote_theme: zendesk/jekyll-theme-zendesk-garden@v0.7.3
-search_enabled: true
-sidebar:
-  - home
-  - user-guide
-  - references
-  - tools
-  - performance
-  - extra
-markdown: kramdown
 title: SLEEF Vectorized Math Library
-logo: img/sleeflogo3.png
+logo: img/sleeflogo3.svg
 description: Vectorized C99 math functions across popular platforms and architectures.
 
+theme: just-the-docs
+footer_content: "Copyright &copy; 2010-2024 SLEEF Project, Naoki Shibata and contributors. <a href=\"https://github.com/shibatch/sleef/blob/master/LICENSE.txt\">SLEEF is open-source software and is distributed under the Boost Software License, Version 1.0.</a>"
+
+
+markdown: kramdown
