@@ -92,7 +92,7 @@ In some cases, it is desirable to fix the last few coefficients to values like
 
 Finding a set of good parameters is not a straightforward process.
 
-<h2 id="benchmark">Benchmarking tool</h2>
+<h2 id="benchmark-legacy">Legacy Benchmarking tool</h2>
 
 SLEEF has a tool for measuring and plotting execution time of each function in
 the library. It consists of an executable for measurements, a makefile for
@@ -162,4 +162,124 @@ Then type `make plot` to generate graphs. You need to have JDK and gnuplot
 installed on your computer. Four graphs are generated : trigdp.png,
 nontrigdp.png, trigsp.png and nontrigsp.png. Please see our [benchmark
 results](../5-performance/) for an example of generated graphs by this tool.
+
+<h2 id="benchmark">Benchmarking tool</h2>
+This tool uses [googlebench][https://github.com/google/benchmark] framework to benchmark SLEEF
+functions.
+
+It is integrated with SLEEF via cmake.
+In order to build this tool automatically when SLEEF is
+built, pass on `-DSLEEF_BUILD_BENCH=ON` CMake option when
+setting up the build directory:
+
+```sh
+cmake -S . -B build-wbench -DSLEEF_BUILD_BENCH=ON
+```
+
+After building SLEEF:
+```sh
+  cmake --build build-wbench -j
+```
+in `build-wbench/bin` folder you will find benchsleef128
+executible.
+
+Run this executible with `./build-wbenh/bin/benchsleef128` in 
+order to obtain microbenchmarks for the functions in the project.
+
+A filter option can also be provided to the executible.
+This feauture in inherited from googlebench, and takes
+a regular expression, and executes only the benchmarks
+whose name matches the regular expression.
+The set of all the benchmarks available can be obtained
+when running the benchmark tool when no filter is set
+and corresponds to all the benchmarks listed in
+benchsleef.cpp.
+
+```sh
+# Examples:
+# * This will benchmark Sleef_sinf_u10 on all intervals enabled in the tool.
+./build-native/bin/benchsleef --benchmark_filter=sinf_u10
+# * This will benchmark all single precision sin functions (scalar, vector and sve if avaialable):
+./build-native/bin/benchsleef --benchmark_filter=sinf
+# * This will benchmark all single precision bit vector functions:
+./build-native/bin/benchsleef --benchmark_filter=vectorf
+```
+
+Note: all corresponds to all functions available in sleef and enabled in the benchmarks in this context.
+
+<h3 id="benchmark">Benchmarking on aarch64</h3>
+If you're running SLEEF in a machine with SVE support such
+as aarch64, the executible generated will have SVE benchmarks
+available for functions specified in benchsleef.cpp.
+
+<h3 id="benchmark">Benchmarking on x86</h3>
+If you're running SLEEF on an x86 machine, two extra
+executibles may be built (according to feauture detection):
+```sh
+./build-wbenh/bin/benchsleef256
+./build-wbenh/bin/benchsleef512
+```
+These will benchmark 256bit and 512bit vector implementations
+for vector functions respectively.
+Note these script can also benchmark scalar functions.
+
+<h3 id="benchmark">Maintenance</h3>
+Some functions are still not enabled in the benchmarks.
+
+In order to add a function which uses the types already
+declared in type_defs.hpp, add a benchmark entry using
+the macros declared in benchmark_callers.hpp.
+These macros have been designed to group benchmarking
+patterns observed in the previous benchmarking system,
+and minimize the number of lines of code while preserving
+readability as much as possible.
+
+Examples:
+(1) If a scalar float lower ulp precision version of
+log1p gets implemented at some point in SLEEF one could
+add benchmarks for it by adding a line to sleefbench.cpp:
+```cpp
+BENCH(Sleef_log10f_u35, scalarf, <min>, <max>)
+```
+This line can be repeated to provide benchmarks on
+multiple intervals.
+
+(2) If the double precision of the function above gets
+implemented as well then, we can simply add:
+```cpp
+BENCH_SCALAR(log10, u35, <min>, <max>)
+```
+which would be equivalent to adding:
+```cpp
+BENCH(Sleef_log10f_u35, scalarf, <min>, <max>)
+BENCH(Sleef_log10_u35, scalard, <min>, <max>)
+```
+If the function you want to add does not use the types in
+type_defs.hpp, extend this file with the types required
+(and ensure type detection is implemented correctly).
+Most likely you will also have to make some changes to
+gen_input.hpp:
+* Add adequate implementation for `vector_len()`:
+```cpp
+int vector_len(<newtype> p){
+	return <vec_len>;
+}
+```
+
+* and Add adequate overload for `gen_input()`:
+```cpp
+<newtype> gen_input (double lo, double hi)
+{ your implementation }
+```
+
+<h3 id="benchmark">Note</h3>
+This tool can also be built as a standalone project.
+From sleef/src/benchmark directory, run:
+
+```sh
+cmake -S . -B build -Dsleef_BINARY_DIR=<build_dir>
+cmake --build build -j
+./build/benchsleef
+```
+
 
